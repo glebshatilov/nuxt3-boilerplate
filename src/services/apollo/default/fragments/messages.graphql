@@ -1,0 +1,37 @@
+#import "../fragments/users.graphql"
+
+fragment MessageFields on Message {
+  id
+  text
+  createdAt
+  author {
+    id
+  }
+}
+
+fragment ChatFields on DirectMessagesChat {
+  id
+  participants {
+    id
+    email
+  }
+  lastMessage {
+    ...MessageFields
+  }
+  lastMessageAt
+  ... on DirectMessagesChat {
+    interlocutor {
+      ...UserBaseFields
+    }
+  }
+}
+
+fragment ChatWithMessagesFields on DirectMessagesChat {
+  ...ChatFields
+
+  messages {
+    data {
+      ...MessageFields
+    }
+  }
+}

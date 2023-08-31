@@ -1,0 +1,176 @@
+$mobile: 320px;
+$small-tablet: 481px;
+$tablet: 768px;
+$small-desktop: 960px;
+$desktop: 1192px;
+$over-desktop: 1482px;
+
+@mixin mobile {
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin mobile-max {
+  @media (max-width: #{$small-tablet - 1}) {
+    @content;
+  }
+}
+
+@mixin small-tablet {
+  @media (min-width: #{$small-tablet}) {
+    @content;
+  }
+}
+
+@mixin small-tablet-max {
+  @media (max-width: #{$tablet - 1}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin tablet-max {
+  @media (max-width: #{$small-desktop - 1}) {
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media (min-width: #{$small-desktop}) {
+    @content;
+  }
+}
+
+@mixin small-desktop-max {
+  @media (max-width: #{$desktop - 1}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-max {
+  @media (max-width: #{$over-desktop - 1}) {
+    @content;
+  }
+}
+
+@mixin over-desktop {
+  @media (min-width: #{$over-desktop}) {
+    @content;
+  }
+}
+
+// TOdo: нужно решить вносить ли этот брекпоинт в структуру (не согласовано с дизайном)
+$tablet-middle: 1025px;
+
+@mixin tablet-middle {
+  @media (min-width: #{$tablet-middle}) {
+    @content;
+  }
+}
+
+@mixin tablet-middle-max {
+  @media (max-width: #{$tablet-middle - 1px}) {
+    @content;
+  }
+}
+
+@mixin ie-only {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+@mixin edge-only {
+  @media (-ms-accelerator: true) {
+    @content;
+  }
+}
+
+@mixin ms-only {
+  @include ie-only {
+    @content;
+  }
+
+  @include edge-only {
+    @content;
+  }
+}
+
+@mixin moz-only {
+  // stylelint-disable-next-line
+  @-moz-document url-prefix() {
+    @content;
+  }
+}
+
+@mixin no-webkit {
+  @include moz-only {
+    @content;
+  }
+
+  @include ms-only {
+    @content;
+  }
+}
+
+@mixin iphonex {
+  // stylelint-disable-next-line
+  @media only screen and (minwidth: 375px) and (maxwidth: 812px) and (device-pixel-ratio: 3) {
+    @content;
+  }
+}
+
+// добавляет элементу эффект наведения, если на данном устройстве
+// имеется возможность ховера (например,эффект наведения на кнопку)
+// на устройствах без возможности hover ничего не добавится.
+@mixin hover {
+  @media (min-width: 1025px) and (orientation: landscape) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+// добавляет элементу эффект наведения, если на данном устройстве имеется возможность ховера
+// на устройствах без hover-эффектов элемент будет отображаться,
+// как будто hover всегда активен (например,карточка товара)
+@mixin hover-show {
+  @media (min-width: 1025px) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (max-width: 1024px), (orientation: portrait) {
+    @content;
+  }
+}
+
+// Когда окончательно перейдём на новые бп, всё ниже надо грохнуть
+
+$phone-big-min: 600px;
+$tablet-big-min: 1160px;
+
+@mixin phone-big {
+  @media (min-width: #{$phone-big-min}) {
+    @content;
+  }
+}
+
+@mixin tablet-big {
+  @media (min-width: #{$tablet-big-min}) {
+    @content;
+  }
+}

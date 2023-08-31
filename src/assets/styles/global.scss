@@ -1,0 +1,121 @@
+@import "./mixins";
+@import "./fonts";
+@import "./reset";
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background: $primary;
+  color: $white;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 95vh;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+
+  &.lock-scroll {
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    @include desktop {
+      position: relative;
+    }
+  }
+
+  // Отключаем автоувеличение высоты на iOS Safari
+  @media screen and (max-device-width: 480px) {
+    text-size-adjust: none;
+  }
+}
+
+.label-for-seo {
+  width: 100%;
+
+  &__span {
+    display: none;
+  }
+}
+
+a {
+  //color: color(blue);
+  text-decoration: none;
+}
+
+.is-visible {
+  display: block !important;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.is-visually-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.is-link {
+  color: color(blue);
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.is-overflow-hidden {
+  overflow: hidden;
+}
+
+.is-mobile-not {
+  display: none !important;
+
+  @include small-desktop {
+    display: block !important;
+  }
+}
+
+.is-mobile-only {
+  @include small-desktop {
+    display: none !important;
+  }
+}
+
+.hide-phone {
+  @include tablet-max {
+    display: none;
+  }
+}
+
+.hide-tablet {
+  @include small-desktop {
+    @include desktop-max {
+      display: none;
+    }
+  }
+}
+
+.nowrap-text {
+  white-space: nowrap;
+}
+
+.textcenter {
+  text-align: center;
+}
+
+input {
+  &::-ms-clear {
+    display: none;
+  }
+
+  &::-webkit-clear-button {
+    display: none;
+  }
+}
+

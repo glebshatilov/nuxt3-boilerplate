@@ -1,0 +1,15 @@
+#import "./common.graphql"
+
+fragment UserExtendedFields on User {
+  ...UserBaseFields
+
+  followers {
+    ...UserBaseFields
+  }
+  following {
+    ...UserBaseFields
+  }
+  articles {
+    ...ArticleBaseFields
+  }
+}

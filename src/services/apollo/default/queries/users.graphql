@@ -1,0 +1,19 @@
+#import "../fragments/users.graphql"
+
+query AllUsers {
+  users {
+    ...UserExtendedFields
+  }
+}
+
+query SignedInUserInfo {
+  user {
+    ...UserExtendedFields
+  }
+}
+
+query UserById($userId: ID) {
+  user(id: $userId) {
+    ...UserExtendedFields
+  }
+}

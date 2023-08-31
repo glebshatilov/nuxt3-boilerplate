@@ -1,0 +1,16 @@
+pages/pagesExtended/landing/**
+static/**
+!.storybook
+legacy/js/polyfills/**
+legacy/js/helpers/vueSmoothReflow.js
+legacy/js/outdatedBrowser/outdatedBrowser.min.js
+legacy/components/pages/Landings/LGStyler/js
+legacy/components/pages/Landings/MavicAir/lory.js
+legacy/components/pages/Landings/LGCordZeroA9/js/satelliteLib.js
+legacy/components/pages/Landings/BespokeConfigStandalone/underscore.js
+legacy/**/owl.carousel.min.js
+legacy/**/owl-carousel.js
+services/apollo/**/generated/graphql.ts
+services/apollo/**/schema.graphql
+services/apollo/oneOrder/**
+!.stylelintrc.js
