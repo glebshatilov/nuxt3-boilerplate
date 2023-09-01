@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import useApiSignIn from '~/features/auth/apiComposables/useApiSignIn.js'
 
 export const useAuthStore = defineStore('auth', {
   state: () => (
@@ -9,11 +10,11 @@ export const useAuthStore = defineStore('auth', {
   ),
   getters: {
     checkIfThisUser: (state) => {
-      return (userId) => state.user.id === userId
+      return (userId: string) => state?.user?.id === userId
     }
   },
   actions: {
-    async signIn(login, password) {
+    async signIn() {
       try {
         // this.userData = await $fetch('/')
         this.isAuthenticated = true
