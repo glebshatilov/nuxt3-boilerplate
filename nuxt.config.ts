@@ -1,8 +1,8 @@
-import { getRoutes } from './routes'
+import { getRoutes } from './src/routes'
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  rootDir: 'src/',
+  srcDir: 'src/',
   devServer: {
     port: Number(process.env.PORT)
   },
@@ -12,7 +12,6 @@ export default defineNuxtConfig({
   ],
   css: ['~/assets/styles/global.scss'],
   vite: {
-    cacheDir: './../node_modules/.vite',
     css: {
       preprocessorOptions: {
         scss: {
@@ -37,7 +36,7 @@ export default defineNuxtConfig({
   apollo: {
     clients: {
       default: {
-        httpEndpoint: 'http://localhost:4000/graphql'
+        httpEndpoint: process.env.GRAPHQL_URI
       }
     },
   }

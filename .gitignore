@@ -1,10 +1,10 @@
 # Nuxt dev/build outputs
-src/.output
-src/.data
-src/.nuxt
-src/.nitro
-src/.cache
-src/dist
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
 
 # Node dependencies
 node_modules
@@ -19,9 +19,9 @@ logs
 .idea
 
 # Local env files
-src/.env
-src/.env.*
-!src/.env.example
+.env
+.env.*
+!.env.example
 
 
 # GraphQL

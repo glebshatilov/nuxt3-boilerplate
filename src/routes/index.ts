@@ -1,4 +1,6 @@
 import editProfileRoutes from './editProfile.routes.js'
+import usersRoutes from './users.routes.js'
+import _exampleRoutes from './_example.routes.js'
 
 export function getRoutes() {
   const routes = [
@@ -7,7 +9,9 @@ export function getRoutes() {
       path: '/',
       file: '~/pages/Index.page.vue'
     },
-    ...editProfileRoutes
+    ...editProfileRoutes,
+    ...usersRoutes,
+    ..._exampleRoutes
   ]
 
   return routes

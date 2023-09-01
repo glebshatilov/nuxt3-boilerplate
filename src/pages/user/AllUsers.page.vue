@@ -3,11 +3,8 @@
 </script>
 
 <template>
-  <h1>
-    Index page
-  </h1>
+  <h1>AllUsers page</h1>
 </template>
 
 <style lang="scss">
-
 </style>
