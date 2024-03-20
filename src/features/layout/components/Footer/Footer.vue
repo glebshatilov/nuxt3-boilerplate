@@ -5,7 +5,7 @@
 <template>
   <div>
     <h2>
-      AppFooter
+      Footer
     </h2>
   </div>
 </template>

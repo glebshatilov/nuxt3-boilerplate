@@ -1,12 +1,13 @@
 <script setup lang="ts">
-
+import Header from '~/features/layout/Header/Header.vue'
+import Footer from '~/features/layout/Footer/Footer.vue'
 </script>
 
 <template>
   <div class="default-layout">
-    <AppHeader />
+    <Header />
     <slot />
-    <AppFooter />
+    <Footer />
   </div>
 </template>
 

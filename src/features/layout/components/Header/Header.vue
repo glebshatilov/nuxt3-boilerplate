@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import AuthForm from '~/features/auth/components/AuthForm/AuthForm.vue'
+import HeaderSearch from './components/HeaderSearch/HeaderSearch.vue'
+import HeaderNav from './components/HeaderNav/HeaderNav.vue'
 </script>
 
 <template>
@@ -18,6 +20,8 @@ import AuthForm from '~/features/auth/components/AuthForm/AuthForm.vue'
         Edit page
       </NuxtLink>
     </ul>
+    <HeaderSearch />
+    <HeaderNav />
     <AuthForm />
   </div>
 </template>
