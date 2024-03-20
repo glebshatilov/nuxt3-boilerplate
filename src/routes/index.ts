@@ -1,14 +1,11 @@
-import editProfileRoutes from './editProfile.routes.js'
-import usersRoutes from './users.routes.js'
-import _exampleRoutes from './_example.routes.js'
+import commonRoutes from './common.routes'
+import editProfileRoutes from './editProfile.routes'
+import usersRoutes from './users.routes'
+import _exampleRoutes from './_example.routes'
 
 export function getRoutes() {
   const routes = [
-    {
-      name: 'index',
-      path: '/',
-      file: '~/pages/Index/Index.page.vue'
-    },
+    ...commonRoutes,
     ...editProfileRoutes,
     ...usersRoutes,
     ..._exampleRoutes
