@@ -2,10 +2,11 @@
 import AuthForm from '~/features/auth/components/AuthForm/AuthForm.vue'
 import HeaderSearch from './components/HeaderSearch/HeaderSearch.vue'
 import HeaderNav from './components/HeaderNav/HeaderNav.vue'
+import AsSpace from '~/components/ui/AsSpace/AsSpace.vue'
 </script>
 
 <template>
-  <div class="app-header">
+  <div class="header">
     <ul>
       <NuxtLink to="/">
         Index page
@@ -20,14 +21,19 @@ import HeaderNav from './components/HeaderNav/HeaderNav.vue'
         Edit page
       </NuxtLink>
     </ul>
-    <HeaderSearch />
-    <HeaderNav />
+    <AsSpace
+      class="header__right"
+      align="center"
+    >
+      <HeaderSearch />
+      <HeaderNav />
+    </AsSpace>
     <AuthForm />
   </div>
 </template>
 
 <style lang="scss">
-.app-header {
+.header {
   background-color: gray;
   padding: 20px;
 

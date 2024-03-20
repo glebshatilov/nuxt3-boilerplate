@@ -1,0 +1,36 @@
+:root {
+  /* Font */
+  --as-font-family-base: sans-serif, arial;
+
+  /* Spacing */
+  --as-space-xxsmall: 4px;
+  --as-space-xsmall: 8px;
+  --as-space-small: 12px;
+  --as-space-medium: 16px;
+  --as-space-large: 24px;
+  --as-space-xlarge: 32px;
+  --as-space-xxlarge: 48px;
+  --as-space-xxxlarge: 72px;
+  --as-spacing-checked-group: 2px;
+
+  /* Colors */
+  --as-color-primary: #000;
+  --as-color-text-on-color: #fff;
+  --as-color-primary-hover: #171717;
+
+  /* Border-width */
+  --as-border-width-default: 1px;
+  --as-border-width-thick: 2px;
+
+  /* Border-radius */
+  --as-border-radius-xsmall: 4px;
+  --as-border-radius-small: 8px;
+  --as-border-radius-medium: 16px;
+  --as-border-radius-large: 24px;
+  --as-border-radius-round: 999vh;
+
+  /* Controls-sizing */
+  --as-control-height-large: 48px;
+  --as-control-height-medium: 40px;
+  --as-control-height-small: 32px;
+}
