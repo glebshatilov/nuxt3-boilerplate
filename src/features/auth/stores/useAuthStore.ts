@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import useApiSignIn from '~/features/auth/apiComposables/useApiSignIn.js'
+import { useApiSignIn } from '../apiComposables/useApiSignIn.js'
 
 export const useAuthStore = defineStore('auth', {
   state: () => (

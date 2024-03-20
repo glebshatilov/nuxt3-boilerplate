@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import EditProfileMenu from '~/features/edit/components/EditProfileMenu/EditProfileMenu.vue'
+import { EditProfileMenu } from '~/features/edit'
 
 </script>
 
