@@ -30,7 +30,7 @@ export default defineNuxtConfig({
     {
       path: '~/components',
       extensions: ['.vue'],
-      pathPrefix: false,
+      pathPrefix: false
     }
   ],
   apollo: {
@@ -38,6 +38,9 @@ export default defineNuxtConfig({
       default: {
         httpEndpoint: process.env.GRAPHQL_URI
       }
-    },
+    }
+  },
+  build: {
+    transpile: ['tslib'] // fix for @nuxtjs/apollo
   }
 })
