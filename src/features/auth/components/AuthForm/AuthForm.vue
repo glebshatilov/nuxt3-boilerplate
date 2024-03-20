@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import useApiSignIn from '../../apiComposables/useApiSignIn.js'
+import { useApiSignIn } from '../../apiComposables/useApiSignIn.js'
 
 const { mutate, error } = useApiSignIn()
 
