@@ -7,7 +7,7 @@ export function getRoutes() {
     {
       name: 'index',
       path: '/',
-      file: '~/pages/Index.page.vue'
+      file: '~/pages/Index/Index.page.vue'
     },
     ...editProfileRoutes,
     ...usersRoutes,
