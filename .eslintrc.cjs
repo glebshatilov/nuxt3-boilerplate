@@ -12,7 +12,7 @@ module.exports = {
     }
   },
   extends: [
-    'standard-with-typescript',
+    'eslint-config-love',
     '@nuxt/eslint-config'
   ]
 }
