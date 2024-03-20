@@ -1,4 +1,4 @@
-import { useCreateRestMutation, createRestMutationFunction } from '~/features/api'
+import { useCreateRestMutation, createRestMutationFunction } from '~/services/api'
 
 interface SignInVariables {
   email: string

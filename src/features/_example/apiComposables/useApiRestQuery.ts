@@ -1,4 +1,4 @@
-import { useCreateRestQuery, createRestQueryFunction } from '~/features/api'
+import { useCreateRestQuery, createRestQueryFunction } from '~/services/api'
 import type { AsyncDataOptions } from '#app'
 
 interface Arguments {

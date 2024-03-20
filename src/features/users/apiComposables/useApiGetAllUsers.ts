@@ -1,6 +1,6 @@
 // @ts-ignore
 import { AllUsers } from '~/services/apollo/default/queries/users.graphql'
-import { useCreateGraphqlQuery } from '~/features/api'
+import { useCreateGraphqlQuery } from '~/services/api'
 import type { AsyncDataOptions } from '#app'
 
 interface UseApiGetAllUsersArgs {
