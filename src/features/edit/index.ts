@@ -1,1 +1,1 @@
-export { default as EditProfileMenu } from './components/EditProfileMenu/EditProfileMenu.vue'
+export { default as EditProfileMenu } from './components/EditProfileMenu'

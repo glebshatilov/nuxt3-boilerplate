@@ -1,4 +1,4 @@
-export { default as AuthForm } from './components/AuthForm/AuthForm.vue'
+export { default as AuthForm } from './components/AuthForm'
 
 // stores
 export { useAuthStore } from './stores/useAuthStore'

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import AuthForm from '~/features/auth/components/AuthForm/AuthForm.vue'
-import HeaderSearch from './components/HeaderSearch/HeaderSearch.vue'
-import HeaderNav from './components/HeaderNav/HeaderNav.vue'
-import AsSpace from '~/components/ui/AsSpace/AsSpace.vue'
+import { AuthForm } from '~/features/auth'
+import HeaderSearch from './components/HeaderSearch'
+import HeaderNav from './components/HeaderNav'
+import AsSpace from '~/components/ui/AsSpace'
 </script>
 
 <template>
